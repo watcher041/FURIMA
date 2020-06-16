@@ -1,0 +1,40 @@
+
+.header
+  .header-top
+    = link_to image_tag("logo/logo.png") , root_path
+    = form_with do
+      %input{name: "keyword", placeholder: "検索ワードを入力してください", type: "text"}
+      %button{type: "submit", class:'btn'} 
+        %i.fas.fa-search
+  .header-bottom
+    .header-bottom-left
+      .header-bottom-left-category
+        = link_to category_path(0) ,class:"category_name", data:{category_id:0} do
+          %i.fas.fa-list
+            カテゴリから探す
+        .header-bottom-left-category-field
+          %ul.header-bottom-left-category-field-nav
+            - Category.where(ancestry:nil).each do |category|
+              %li= link_to category.name, category_path(category.id), data:{category_id:category.id}
+      .header-bottom-left-tag
+        = link_to "#" do
+          %i.fas.fa-tags
+            タグから探す
+    .header-bottom-right
+      -if user_signed_in?
+        .header-bottom-right-todo
+          = link_to "#" do
+            %i.fas.fa-check
+              ToDoリスト
+        %ul.header-bottom-right-mypage
+          = link_to user_path(current_user.id) do
+            %i.fas.fa-user
+              マイページ
+          %li=link_to "ログアウト",  destroy_user_session_path, method: :delete
+      -else
+        = link_to new_user_session_path do
+          %i.fas.fa-sign-in-alt
+            ログイン 
+        = link_to new_user_registration_path do
+          %i.fas.fa-user-plus
+            新規登録 

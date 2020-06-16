@@ -1,0 +1,16 @@
+
+.users {
+
+  &_index { 
+    .top {
+      background-image:image-url("pict/top_image.jpg");
+      background-size:contain;
+      height:400px; width:100%;
+      background-repeat: no-repeat;
+    }
+    .footer {
+      background-color: #333333;
+    }
+  }
+
+}
