@@ -1,0 +1,26 @@
+
+.exhibition {
+  bottom:50px;
+  right:50px;
+  position: fixed;
+  height:150px;
+  width:150px;
+  > a {
+    display: block;
+    background-color:lightseagreen;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    text-decoration: none;
+    &:hover {
+      background-color: orange;
+    }
+    > i {
+      font-size:80px;
+    }
+  }
+}

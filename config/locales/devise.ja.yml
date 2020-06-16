@@ -47,6 +47,7 @@ ja:
         post_way: 郵送方法
         status: 商品の状態
         category: カテゴリー名
+        prefecture: 郵送元
         brand: ブランド名
     models:
       user: ユーザ
