@@ -5,6 +5,6 @@ Rails.application.routes.draw do
 
   root "homes#index"
 
-  resources :categories
+  resources :categories, only: [:index,:show]
 
 end

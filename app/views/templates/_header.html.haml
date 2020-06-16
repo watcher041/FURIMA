@@ -9,13 +9,13 @@
   .header-bottom
     .header-bottom-left
       .header-bottom-left-category
-        = link_to category_path(0) ,class:"category_name", data:{category_id:0} do
+        = link_to categories_path ,class:"category_name", data:{category_id:0} do
           %i.fas.fa-list
             カテゴリから探す
         .header-bottom-left-category-field
           %ul.header-bottom-left-category-field-nav
             - Category.where(ancestry:nil).each do |category|
-              %li= link_to category.name, category_path(category.id), data:{category_id:category.id}
+              %li= link_to category.name, category_path(category.id), class:"category_name", data:{category_id:category.id}
       .header-bottom-left-tag
         = link_to "#" do
           %i.fas.fa-tags
