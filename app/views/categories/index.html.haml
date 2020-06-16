@@ -1,0 +1,13 @@
+
+= render "templates/categories_header"
+.categories_index
+  - @categories.each_with_index do |parent,num|
+    .categories_index-category{class:"categories_header"}
+      %h2= link_to parent.name, category_path(parent.id)
+      .categories_index-category-child
+        - parent.children.each do |child|
+          %p=link_to child.name, category_path(child.id)
+          .categories_index-category-child-grandchild{class:"categories_header-category"}
+            - child.children.each do |grandchild|
+              = link_to grandchild.name,category_path(grandchild.id)
+= render "templates/footer"
