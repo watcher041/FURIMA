@@ -1,0 +1,15 @@
+
+.homes {
+
+  &_index {
+    &-top {
+      width:80%;
+      background-image: image-url("pict/top_image.jpg");
+      height:500px;
+      background-size: contain;
+      margin:0 auto;
+      background-repeat: no-repeat;
+    }
+  }
+
+}
