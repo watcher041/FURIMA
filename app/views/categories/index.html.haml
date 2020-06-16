@@ -1,9 +1,14 @@
 
-= render "templates/categories_header"
+= render "templates/header"
+.categories_header
+  %h2 カテゴリー目次
+  .categories_header-category
+    - @categories.each_with_index do |category,num|
+      = link_to category.name, "" ,data:{category_index:num}, remote: true
 .categories_index
   - @categories.each_with_index do |parent,num|
     .categories_index-category{class:"categories_header"}
-      %h2= link_to parent.name, category_path(parent.id)
+      %h2{id:"#{num}"}= link_to parent.name, category_path(parent.id)
       .categories_index-category-child
         - parent.children.each do |child|
           %p=link_to child.name, category_path(child.id)
