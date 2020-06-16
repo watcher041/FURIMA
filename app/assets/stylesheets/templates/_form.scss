@@ -1,9 +1,10 @@
 
 .form_header {
-  width:20%;
-  margin:50px auto;
+  width:15%;
+  margin:40px auto;
   & img {
-    width:100%;
+    max-width:100%;
+    max-height:100%;
   }
 }
 
@@ -48,9 +49,9 @@
         width:100%;
       }
       & input {
-        width:100%;
+        width:90%;
         padding:5px 10px;
-        font-size:20px;
+        font-size:15px;
         margin:10px 0 30px;
         border-radius: 10px;
         border:1px solid lightgrey;
@@ -119,8 +120,8 @@
     }
     & select {
       padding:0 10px;
-      width:100%;
-      font-size:20px;
+      width:20%;
+      font-size:15px;
       height:40px;
       border-radius: 10px;
       border:1px solid lightgrey;
@@ -139,10 +140,11 @@
 }
 
 .form_footer {
-  width:20%;
-  margin:50px auto;
+  width:15%;
+  margin:40px auto;
   & img {
-    width:100%;
+    max-width:100%;
+    max-height:100%;
   }
   > p {
     text-align: center;
