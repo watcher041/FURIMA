@@ -1,2 +1,5 @@
+
 class HomesController < ApplicationController
+
+
 end

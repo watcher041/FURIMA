@@ -13,10 +13,22 @@ Rails.application.routes.draw do
   end
 
   root "homes#index"
+  resource :homes, only: [:show]
 
   resources :categories, only: [:index,:show]
 
-  resources :users
+  resources :users ,only: [:show] do
+    resources :side_bars, only: [] do
+      collection do
+        get :nice
+        get :evaluation
+        get :draft
+        get :exhibited
+        get :purchased
+        get :contact
+      end
+    end
+  end
 
   resources :items
 
