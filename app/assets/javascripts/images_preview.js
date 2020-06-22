@@ -98,7 +98,7 @@ $(function(){
 
     // 10枚あるときに削除した場合は画像入力欄を表示する。
     if ( $(".field-area-image").length == 10 ){
-      $(".field-area-label").css("display","inline-block");
+      $(".field-area-label").css("display","flex");
     }
 
     // 削除ボタンが押された要素の本体を削除

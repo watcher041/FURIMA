@@ -37,10 +37,10 @@
     background-color: grey;
   }
   > form {
-      text-align: center;
       width: 600px;
       padding:40px;
       margin:0 auto;
+      text-align: center;
     & .field {
       width:100%;
       > label {
@@ -55,17 +55,15 @@
         margin:10px 0 30px;
         border-radius: 10px;
         border:1px solid lightgrey;
-        text-align: center;
       }
       & textarea {
         text-align: left;
         width:100%;
         padding:5px 10px;
-        font-size:20px;
+        font-size:15px;
         margin:10px 0 30px;
         border-radius: 10px;
         border:1px solid lightgrey;
-        text-align: center;
         resize: none;
         height:200px;
       }
@@ -74,7 +72,7 @@
         display: flex;
         flex-wrap: wrap;
         width:$image_area;
-        margin-bottom: 20px;
+        margin:10px 0 20px;
         &-image {
             width: calc( #{$image_area} / 5 - 0.5px );
           &-outline {
