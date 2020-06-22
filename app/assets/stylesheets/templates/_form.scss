@@ -106,6 +106,7 @@
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          height:calc( #{$image_area} / 5 + 25px );
           > i {
             font-size:50px;
           }
@@ -125,7 +126,7 @@
       height:40px;
       border-radius: 10px;
       border:1px solid lightgrey;
-      margin:10px 10px 30px;
+      margin:20px 0 20px;
     }
     & input[type="submit"] {
       background-color: lightseagreen;

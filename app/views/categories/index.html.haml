@@ -15,4 +15,8 @@
           .categories_index-category-child-grandchild{class:"categories_header-category"}
             - child.children.each do |grandchild|
               = link_to grandchild.name,category_path(grandchild.id)
+#scroll_to_top
+  %i.fas.fa-angle-double-up
+  %p 一番上に戻る
+= render "templates/exhibition"
 = render "templates/footer"

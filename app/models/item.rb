@@ -29,7 +29,10 @@ class Item < ApplicationRecord
     validates :category_id, numericality: { greater_than: 0 }
     validates :situation
   end
-  validates_associated :images
+
+  # こちらでimageのバリデーションを行う
+  validates :images, presence: true
+
   
   validates :brand_id, numericality: { greater_than: 0 }, allow_blank: true
 
