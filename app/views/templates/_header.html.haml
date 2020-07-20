@@ -2,10 +2,11 @@
 .header
   .header-top
     = link_to image_tag("logo/logo.png") , root_path
-    = form_with do
-      %input{name: "keyword", placeholder: "検索ワードを入力してください", type: "text"}
-      %button{type: "submit", class:'btn'} 
-        %i.fas.fa-search
+    = form_with() do |f|
+      = f.text_field :keyword, placeholder: "キーワードから探す", class: "search_box"
+      %label
+        = icon("fas","search")
+        = f.submit "検索"  
   .header-bottom
     .header-bottom-left
       .header-bottom-left-category
