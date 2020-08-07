@@ -24,12 +24,11 @@ class Item < ApplicationRecord
     validates :prefecture_id, numericality: { greater_than: 0 }
     validates :category_id, numericality: { greater_than: 0 }
     validates :situation
+    validates :images
   end
 
-  # こちらでimageのバリデーションを行う
-  validates :images, presence: true
-
-  
   validates :brand_id, numericality: { greater_than: 0 }, allow_blank: true
+
+  is_impressionable counter_cache: true
 
 end

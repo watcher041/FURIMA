@@ -1,7 +1,17 @@
 
 = render "templates/header"
 .homes_index
-  .homes_index-top
+  %ul.homes_index-top
+    - 3.times do |index|
+      %li= image_tag "pict/top_image#{index+1}.jpg"
+  .homes_index-main
+    %h2 今月話題の商品
+    = render partial: "templates/item_list", locals: {items:@items} 
+    %h2 カテゴリーごとの人気商品
+    .homes_index-main-category
+      - Category.where(ancestry:nil).each do |category|
+        %label= category.name
+    = render partial: "templates/item_list", locals: {items:@items} 
 = render "templates/exhibition"
 = render "templates/footer"
   

@@ -2,6 +2,7 @@
 class ItemsController < ApplicationController
 
   before_action :find_item, except: [:index,:new,:create]
+  impressionist actions: [:show]
 
   def new
     @item = Item.new
@@ -33,7 +34,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-
   end
   
   private
