@@ -54,12 +54,13 @@
       &-category{
         background-color: whitesmoke;
         padding:10px;
-        > label{
+        > a{
           border-radius: 10px;
           display: inline-block;
           border:1px solid black;
           padding:0 5px;
           margin:5px;
+          text-decoration: none;
         }
       }
     }

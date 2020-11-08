@@ -19,4 +19,16 @@ class CategoriesController < ApplicationController
 
   end
 
+  def item_list
+    @items = []
+    Item.find_each do |item|
+      parent_id = Category.find(item.category_id).ancestor_ids.first
+      if @items.length >= 10
+        break
+      elsif parent_id == params[:id].to_i
+        @items << item
+      end
+    end
+  end
+
 end

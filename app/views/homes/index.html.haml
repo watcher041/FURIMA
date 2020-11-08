@@ -10,8 +10,8 @@
     %h2 カテゴリーごとの人気商品
     .homes_index-main-category
       - Category.where(ancestry:nil).each do |category|
-        %label= category.name
-    = render partial: "templates/item_list", locals: {items:@items} 
+        =link_to category.name ,item_list_category_path(category.id), remote:true
+    .homes_index-main-category_item
 = render "templates/exhibition"
 = render "templates/footer"
   

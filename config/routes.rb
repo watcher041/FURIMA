@@ -15,7 +15,11 @@ Rails.application.routes.draw do
   root "homes#index"
   resource :homes, only: [:show]
 
-  resources :categories, only: [:index,:show]
+  resources :categories, only: [:index,:show] do
+    member do
+      get :item_list
+    end
+  end
 
   resources :users ,only: [:show] do
     resources :side_bars, only: [] do
